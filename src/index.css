@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #f5f1ea;
+  --cream-deep: #ece0c6;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4742;
+  --gray-label: #807d7a;
+  --accent: #f4583d;
+  --amber: #e99c1e;
+  --terra: #e1654f;
+  --moss: #3f6b4f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-mono2 {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+.section-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hr-rule {
+  border: none;
+  border-top: 2px solid var(--ink);
+}
+
+.thin-rule {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.tbl th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-label);
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.tbl td {
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  vertical-align: top;
+}
+
+.tbl tr:last-child td {
+  border-bottom: none;
+}
+
+.dust {
+  position: relative;
+}
+
+.dust::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+.recharts-wrapper *:focus {
+  outline: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
